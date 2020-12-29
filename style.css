@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.attribution {  
+    position: absolute;
+    bottom:5px;
+    width:90%;
+    font-size: 16px;
+    text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+  body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        background-color: hsl(229, 57%, 11%);
+        font-size: 14px;
+        color:hsl(243, 100%, 93%);
+        font-family: 'Raleway', sans-serif;
+    }
+.main{
+        position: relative;
+        height:100vh;
+        background-color: hsl(229, 57%, 11%);
+        width:100vw;
+        place-items: center;
+        background-image: url("./images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position:bottom;
+        z-index: -1;
+    }
+.card{
+        display: flex;
+        place-items: center;
+        max-width:800px;
+        margin:auto;
+        transform: translateY(30vh);
+    }
+#storage,#logo{
+        background-color: hsl(228, 56%, 26%);
+        border-radius: 8px;
+        padding:30px;
+        margin:20px 15px;
+    }
+#logo{       
+        border-top-right-radius:30% 50%;
+        width:32%;   
+        padding-top: 40px;     
+    }
+#logo img{
+        margin:0 10px 0 10px;
+    }
+#file{
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        display: flex;
+        width:65%;
+    }
+    #icons{
+        widows: 40px;
+        height:40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: hsl(229, 57%, 11%);
+    }
+    #storage{
+        width:50%;
+        background-color: hsl(228, 56%, 26%);
+        height:80px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        transform: translateY(15px);
+    }
+    #indicator { 
+        height: 18px;  /* Can be anything */
+        position: relative;
+        background: rgba(0,0,0,.4);
+        border-radius: 25px;
+        width:100%;
+        display: flex;
+        align-items:center;
+        margin:10px 0;
+    }
+    #indicator > span {
+        display: block;
+        height: 87%;
+        border-radius:20px ;
+        text-align: right;
+    background-image: linear-gradient(to right, red, yellow);
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        position: relative;
+        overflow: hidden;
+      }
+      .dot {
+        margin-right: 1%;
+        height: 10px;
+        width: 10px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: right;
+    }  
+    .box{
+        width:150px;
+        height:60px;
+        background: white;
+        position: absolute;
+        top:0;
+        right:30px;
+        border-radius: 8px;
+        transform: translateY(-40px);
+        text-align: center;
+        /* padding:10px; */
+    } 
+    .box p{
+        color:grey;
+        font-size: 14;
+        font-weight: 400;
+    }
+    .box span{
+        color:black;
+        font-size: 26px;
+        font-weight: 700;
+    }
+  .box::after{
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 100%;
+    right: 0;
+    margin-top: -20px;
+    /* margin-right: -2px; */
+    border-top: 20px solid white;
+    border-right: 20px solid white;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+    #value{
+        font-weight: 700;
+        font-size: 10px;
+        transform: translateY(-10px);
+    }
+    @media (max-width:800px)
+    {
+        .card{
+            display:block;
+            width:100vw;
+        }
+        #storage,#logo{
+            width: 350px;;
+            margin:70px auto;
+            transform: scaleY(1.2) translateY(-15vh);
+                }
+    }
+    @media (max-width:600px)
+    {
+       .main{
+           background: none;
+       }
+        body{
+           /* background-color: none; */
+            background-image: url("./images/bg-mobile.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .box{
+            /* position: absolute; */
+            left:25%;
+            top:100%;
+            /* border-radius: 8px; */
+            transform: translateY(-30px);
+        } 
+        .box::after{
+            display: none;
+        }
+    }
